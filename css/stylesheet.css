@@ -1,0 +1,360 @@
+/*CSS Reset*/
+html,
+body,
+div,
+section,
+article,
+aside,
+nav,
+heading,
+footer,
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* global */
+
+body {
+  font-family: 'anaheim', monospace, serif;
+  background-color: black;
+}
+
+.wrapper {
+  width: 90%;
+  margin: auto; /* auto margin to centralise */
+  padding: 5px;
+  background-image: url(../images/other_background.jpg);
+  margin-top: 50px;
+  background-attachment: fixed;
+  background-position: 40% 20%; /*Position of background img for main content*/
+  border-top: 10px solid orange;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Header */
+header {
+  width: 100%; /* So header stretched across the screen */
+  background-color: black;
+  color: white;
+  padding: 5px;
+  background-color: orange;
+  border-bottom: 10px solid white;
+}
+
+header h1 {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 32px;
+}
+
+header nav {
+  margin: auto;
+  text-align: center;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+header nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 15px;
+  color: black;
+  padding: 3px;
+}
+
+/* All nav bars hover decoration */
+header nav a:hover,
+aside a:hover,
+footer nav a:hover {
+  background-color: white;
+  color: orange;
+  text-transform: uppercase;
+}
+
+/* Decorate current page's nav link */
+.current {
+  border-bottom: 4px solid white;
+}
+
+/* Aside styling*/
+aside {
+  width: 18%;
+  height: 100%;
+  background-color: rgba(255, 165, 0, 1);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 20px;
+  color: white;
+  float: right;
+  text-align: center;
+
+  /* so sidebars stack when more than one */
+  clear: right;
+}
+
+aside a {
+  display: block;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 15px;
+  color: black;
+  padding: 3px;
+}
+
+aside ul li {
+  text-align: left;
+}
+
+/* article container */
+.container {
+  width: 80%;
+}
+
+/* section styling */
+.content {
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 20px;
+  border-left: 2px solid black;
+  border-right: 2px solid white;
+}
+
+.content hgroup,
+.about_course {
+  text-align: left;
+  list-style-type: none;
+}
+
+/*Styling images on the site*/
+.unit_images_v {
+  /*set max w and h for images so they don't overflow*/
+  max-width: 400px;
+  max-height: 450px;
+
+  width: 45%;
+  height: 35%;
+  margin: 10px;
+}
+
+.unit_images_h {
+  /*set max w and h for images so they don't overflow*/
+  max-width: 400px;
+  max-height: 450px;
+
+  width: 45%;
+  height: 35%;
+  margin: 10px;
+}
+
+#me {
+  /*set max w and h for images so they don't overflow*/
+  max-width: 300px;
+  max-height: 400px;
+
+  width: 45%;
+  height: 35%;
+  position: relative;
+  top: -85px;
+  margin: 10px;
+}
+
+#soames {
+  /*set max w and h for images so they don't overflow*/
+  max-width: 500px;
+  max-height: 450px;
+  float: left;
+  width: 45%;
+  height: 35%;
+  margin: 5px;
+  margin: 10px;
+}
+
+img:hover {
+  opacity: 0.7;
+}
+
+/* Table styling */
+table {
+  margin: auto;
+}
+
+table,
+th,
+td {
+  /*Collapse border into a single line instead of double lines*/
+  border-collapse: collapse;
+  width: 450px;
+  text-align: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+th {
+  background-color: black;
+  color: white;
+  font-weight: bolder;
+}
+/* Style every odd row down */
+tr:nth-child(odd) {
+  background-color: orange;
+  color: white;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 165, 0, 0.7);
+  border-radius: 20px;
+
+  /* So Footer clears all content and goes to bottom of page*/
+  clear: both;
+}
+
+footer nav {
+  padding: 10px;
+  margin: 10px;
+}
+
+footer nav li {
+  /*Make links display in a line*/
+  display: inline-block;
+  width: 200px;
+  height: auto;
+  text-align: center;
+  margin: auto;
+}
+
+footer nav a {
+  width: 100px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 15px;
+  color: black;
+  padding: 5px;
+}
+
+footer p {
+  font-size: 16px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+/* media queries for responsive design */
+
+/* Making both nav bars responsive, making it stack as a block element*/
+@media screen and (max-width: 900px) {
+  header nav ul li {
+    /* So links stack vertically */
+    display: block;
+    margin-top: 5px;
+  }
+
+  footer nav ul li {
+    /*So footer links stack vertically*/
+    display: block;
+    margin-top: 5px;
+  }
+
+  aside a {
+    font-size: 16px;
+  }
+
+  .content {
+    font-size: 14px;
+  }
+}
+
+/* Resizing some elements for smaller screensizes */
+@media screen and (max-width: 660px) {
+  table {
+    margin: auto;
+  }
+
+  table,
+  th,
+  td {
+    border-collapse: collapse;
+    width: 250px;
+    text-align: center;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+
+  th {
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+  }
+  /* Style every odd row down */
+  tr:nth-child(odd) {
+    background-color: orange;
+    color: white;
+  }
+
+  /*resize images to fit smaller screens*/
+  .unit_images_h {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .unit_images_v {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5px;
+  }
+
+  #me {
+    width: 175px;
+    height: 250px;
+    position: relative;
+    top: -85px;
+    margin: 10px;
+  }
+
+  #soames {
+    width: 250px;
+    margin: 5px;
+    margin: 10px;
+  }
+
+  /*Make aside go above content for smaller mobile devices*/
+  aside {
+    width: 95%;
+    margin: 10px;
+    float: none;
+  }
+  /*Center the container for mobile devices so it isnt lopsided*/
+  .container {
+    margin: auto;
+    width: 100%;
+  }
+}
+
+/* To stop an image overflowing on the aboutme page*/
+@media screen and (max-width: 340px) {
+  #me {
+    width: 30%;
+    height: 100px;
+  }
+}
